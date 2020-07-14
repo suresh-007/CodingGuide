@@ -1,0 +1,17 @@
+<div class='Question'>
+    <h1>{{question.title}}</h1>
+    <p>{{question.question}}</p>
+    <div>
+        {% for answer in answers %}
+        <div>
+            <h3>Explanation</h3>
+            <p>
+                {{answer.explanation|safe}}
+                <pre>
+                    {{answer.code}}
+                </pre>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
